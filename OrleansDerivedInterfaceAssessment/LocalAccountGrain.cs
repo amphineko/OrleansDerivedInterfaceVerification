@@ -3,11 +3,11 @@ using Orleans;
 
 namespace OrleansDerivedInterfaceAssessment
 {
-    internal class RemoteAccount : Grain, IRemoteAccount
+    internal class LocalAccountGrain : Grain, ILocalAccount
     {
         public Task<AccountType> GetAccountType()
         {
-            return Task.FromResult(AccountType.Remote);
+            return Task.FromResult(AccountType.Local);
         }
     }
 }
